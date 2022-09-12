@@ -1,22 +1,5 @@
 let result = '';
 
-function checkText(text) {
-    if (text == "") {
-        alert("Por favor, insira um texto!");
-        return false;
-    }
-    return true;
-}
-
-function checkQuantity(value) {
-    if (value == "") {
-        alert("Por favor, insira a quantidade de linhas!");
-        return false;
-    }
-    return true;
-}
-
-
 function reset(value) {
     document.getElementById('result').setAttribute('value', value);
     result = '';
