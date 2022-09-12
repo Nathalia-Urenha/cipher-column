@@ -1,13 +1,24 @@
 let result = '';
 
-
-function setResult(value) {
-    document.getElementById('result').setAttribute('value', value);
-    result = '';
+function checkText(text) {
+    if (text == "") {
+        alert("Por favor, insira um texto!");
+        return false;
+    }
+    return true;
 }
 
-function setResult() {
-    document.getElementById('result').setAttribute('value', '');
+function checkQuantity(value) {
+    if (value == "") {
+        alert("Por favor, insira a quantidade de linhas!");
+        return false;
+    }
+    return true;
+}
+
+
+function reset(value) {
+    document.getElementById('result').setAttribute('value', value);
     result = '';
 }
 
@@ -35,8 +46,8 @@ function encryptReplacement() {
 
     newMessage = newMessage.join("")
     const criptografada = (newMessage)
-
-    setResult(criptografada);
+    // console.log(criptografada)
+    reset(criptografada);
 }
 
 function decryptReplacement() {
@@ -63,7 +74,7 @@ function decryptReplacement() {
 
     newMessage2 = newMessage2.join("");
     const descriptografada = (newMessage2);
-    setResult(descriptografada);
+    reset(descriptografada);
 }
 
 function encryptTransposition() {
@@ -115,7 +126,7 @@ function encryptTransposition() {
     const criptografada = (orderedMessage.join(""));
 
     // console.log(criptografada);
-    setResult(criptografada);
+    reset(criptografada);
 
 
 }
@@ -178,6 +189,6 @@ function decryptTransposition() {
         )
     }
     const descriptografada = (decriptedMessage.join(""))
-    setResult(descriptografada);
+    reset(descriptografada);
 
 }
